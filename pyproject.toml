@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "israel-companies"
+dynamic = ["version"]
+description = "Look up Israeli companies in the Registrar of Companies (רשם החברות) on data.gov.il by number (ח.פ.) or name, with checksum validation and Hebrew explanations of every company status"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Aiterra", email = "info@aiterra.co.il" }]
+keywords = ["israel", "companies", "registrar", "רשם החברות", "ח.פ", "חפ", "data.gov.il", "company-number", "hebrew", "kyc"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Natural Language :: Hebrew",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Office/Business",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://www.aiterra.co.il/tools/company-lookup"
+Repository = "https://github.com/aiterra-il/israel-companies-python"
+Issues = "https://github.com/aiterra-il/israel-companies-python/issues"
+"npm package" = "https://www.npmjs.com/package/israel-companies"
+Aiterra = "https://www.aiterra.co.il"
+
+[tool.setuptools]
+packages = ["israel_companies"]
+
+[tool.setuptools.dynamic]
+version = { attr = "israel_companies.__version__" }
+
+[tool.setuptools.package-data]
+israel_companies = ["py.typed"]
